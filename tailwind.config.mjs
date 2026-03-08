@@ -7,20 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0A0F1F',
+        navy: '#0A0F1F',
         electric: '#3A7BFF',
-        soft: '#F5F7FA',
-        violet: '#7A5CFF',
+        soft: '#F5F7FA'
       },
       boxShadow: {
-        soft: '0 10px 40px rgba(10, 15, 31, 0.08)',
+        soft: '0 10px 40px rgba(10, 15, 31, 0.08)'
       },
       backgroundImage: {
-        'setu-gradient': 'linear-gradient(135deg, #3A7BFF 0%, #7A5CFF 100%)',
-      },
-      borderRadius: {
-        '2xl': '1.25rem',
-      },
+        'setu-gradient': 'linear-gradient(135deg, #3A7BFF 0%, #7C3AED 100%)'
+      }
     },
   },
   plugins: [],

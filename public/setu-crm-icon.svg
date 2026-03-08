@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
-  <defs>
-    <linearGradient id="g" x1="10" y1="12" x2="82" y2="84" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3A7BFF"/>
-      <stop offset="1" stop-color="#6C63FF"/>
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="80" height="80" rx="24" fill="#F5F7FA"/>
-  <rect x="18" y="20" width="60" height="44" rx="16" fill="url(#g)" opacity="0.18"/>
-  <path d="M24 52c0-10.493 8.507-19 19-19h10c10.493 0 19 8.507 19 19v4c0 8.837-7.163 16-16 16H40c-8.837 0-16-7.163-16-16v-4Z" fill="url(#g)"/>
-  <circle cx="36" cy="46" r="6" fill="white"/>
-  <circle cx="60" cy="46" r="6" fill="white"/>
-  <path d="M34 62c4-4 8.667-6 14-6s10 2 14 6" stroke="white" stroke-width="4" stroke-linecap="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" fill="none"><rect width="240" height="64" rx="12" fill="#0A0F1F"/><text x="24" y="40" fill="white" font-family="Arial" font-size="28" font-weight="700">SETU GROUPS</text></svg>

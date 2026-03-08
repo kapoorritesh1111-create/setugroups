@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" fill="none">
-  <rect width="240" height="72" rx="16" fill="white"/>
-  <rect x="1" y="1" width="238" height="70" rx="15" stroke="#DCE3F0"/>
-  <circle cx="36" cy="36" r="14" fill="#3A7BFF" opacity="0.14"/>
-  <path d="M30 42V30h4.5c3 0 5.5 2.4 5.5 5.4 0 3-2.5 5.4-5.5 5.4H30Z" fill="#3A7BFF"/>
-  <text x="60" y="42" fill="#0A0F1F" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="600">Atlas Systems</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" fill="none"><rect width="240" height="64" rx="12" fill="#0A0F1F"/><text x="24" y="40" fill="white" font-family="Arial" font-size="28" font-weight="700">SETU GROUPS</text></svg>
