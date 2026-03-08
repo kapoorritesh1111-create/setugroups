@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { SectionShell } from "./ui/section-shell";
+import { SectionShell } from "@/components/ui/section-shell";
 
 const metrics = [
   ['3', 'Business pillars'],

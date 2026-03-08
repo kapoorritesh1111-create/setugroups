@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Header } from "../../components/header";
-import { Footer } from "../../components/footer";
-import { PricingPageContent } from "../../components/pricing/pricing-page";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { PricingPageContent } from "@/components/pricing/pricing-page";
 
 export const metadata: Metadata = {
   title: "Pricing | Setu Track",

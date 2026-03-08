@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { Container } from "./ui/container";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
 
 const navItems = [
   { label: "Who We Are", href: "/#who-we-are" },

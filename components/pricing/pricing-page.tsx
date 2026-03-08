@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
-import { Container } from "../ui/container";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
 
 const tiers = [
   {
