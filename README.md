@@ -1,72 +1,35 @@
-# SETU Groups Website Rebuild
+# SETU Groups — marketing site repo
 
-Production-ready Next.js 14 starter for rebuilding `setugroup.com` as a premium SaaS ecosystem website.
+This repo is a rebuilt Next.js App Router site for SETU Groups.
 
-## Included
-- Home page with premium SaaS structure
-- Shared header, footer, CTA system, and reusable section primitives
-- Product pages for **SETU Track** and **SETU CRM**
-- Solutions, Company, and Contact pages
-- Tailwind design tokens with a clean brand system
-- Metadata, robots, sitemap, and Open Graph scaffolding
-- Vercel-ready App Router structure
-- Contact API route stub ready for CRM/email integration
+## What is included
+- Parent brand website for SETU Groups
+- Product pages for SETU Track and SETU CRM
+- Locale routing for `en` and `hi`
+- SEO basics: metadata, robots, sitemap, JSON-LD
+- Theme toggle with persistence
+- Contact form API route with optional Resend integration
+- Case studies and newsroom pages
+- Logo usage notes and starter asset pack in `public/`
 
-## Important implementation note
-The uploaded handoff kit contained strategy documents and prompts, but no finalized production logo asset files. To keep the repo runnable and visually complete, this build includes clean SVG brand placeholders for:
-- `public/setu-groups-logo.svg`
-- `public/setu-symbol.svg`
-- `app/icon.svg`
-- `public/og-image.svg`
+## Chosen logo direction
+Use the intertwined bridge symbol as the master corporate mark.
 
-Replace those with the approved master brand assets before launch if you want exact logo fidelity.
+Why:
+- It expresses the meaning of SETU as a bridge.
+- It visually supports data flow, supply chain routes, and interconnected systems.
+- It can scale into product icons for SETU Track and SETU CRM.
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
+## Asset usage
+- `public/logo.png` → main horizontal logo lockup
+- `public/symbol.png` → symbol only for app-style use, favicon generation, and product branding
+
+## Quick start
+1. `npm install`
+2. Copy `.env.example` to `.env.local`
+3. Add your production domain and Resend credentials if needed
+4. `npm run dev`
+5. Open `http://localhost:3000`
 
 ## Deploy
-1. Push to GitHub
-2. Import into Vercel
-3. Set `NEXT_PUBLIC_SITE_URL=https://setugroup.com`
-4. Replace placeholder contact routing in `app/api/contact/route.ts` with Resend, SMTP, HubSpot, or your CRM webhook
-5. Swap placeholder SVG brand files with final approved assets
-
-## File structure
-```text
-app/
-  api/contact/route.ts
-  company/page.tsx
-  contact/page.tsx
-  products/page.tsx
-  setu-crm/page.tsx
-  setu-track/page.tsx
-  solutions/page.tsx
-  globals.css
-  icon.svg
-  layout.tsx
-  page.tsx
-  robots.ts
-  sitemap.ts
-components/
-  button-link.tsx
-  container.tsx
-  feature-grid.tsx
-  final-cta.tsx
-  logo.tsx
-  metadata.ts
-  product-hero.tsx
-  section-heading.tsx
-  site-footer.tsx
-  site-header.tsx
-lib/
-  site.ts
-  utils.ts
-public/
-  favicon.svg
-  og-image.svg
-  setu-groups-logo.svg
-  setu-symbol.svg
-```
+Deploy on Vercel. The middleware will redirect root traffic to `/en` or `/hi`.

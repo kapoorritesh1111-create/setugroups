@@ -1,52 +1,223 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #ffffff;
-  --muted: #f8fafc;
-  --border: #e2e8f0;
-  --brand: #2563eb;
-  --brand-soft: #dbeafe;
-  --brand-deep: #1d4ed8;
-  --brand-glow: #60a5fa;
+  --brand-blue: #0C2D6A;
+  --brand-blue-2: #1d4288;
+  --brand-orange-1: #F39200;
+  --brand-orange-2: #D76A00;
+  --gray-950: #0a1328;
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-500: #6b7280;
+  --gray-400: #9ca3af;
+  --gray-300: #d1d5db;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --white: #ffffff;
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --surface-2: #f7f8fb;
+  --border: #e5e7eb;
+  --hero-glow: radial-gradient(circle at top right, rgba(243,146,0,0.14), transparent 34%), radial-gradient(circle at 12% 18%, rgba(12,45,106,0.12), transparent 30%);
+  --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 24px 80px rgba(15, 23, 42, 0.12);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --max-width: 1240px;
 }
 
-* {
-  box-sizing: border-box;
+[data-theme='dark'] {
+  --bg: #0b1020;
+  --fg: #e8ecf5;
+  --muted: #a1a9b8;
+  --surface: #121833;
+  --surface-2: #0f1630;
+  --border: #1f2a44;
+  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --hero-glow: radial-gradient(circle at top right, rgba(243,146,0,0.16), transparent 34%), radial-gradient(circle at 12% 18%, rgba(66,127,255,0.16), transparent 30%);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body {
+  padding: 0;
   margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  text-rendering: optimizeLegibility;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+main { min-height: calc(100vh - 180px); }
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding: 88px 0;
+}
+.sectionBorder {
+  border-top: 1px solid var(--border);
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-orange-2);
+  font-weight: 700;
+}
+.h1, .h2, .h3 {
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+.h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.98;
+}
+.h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.04;
+}
+.h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.copy {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.card {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 94%, transparent), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: color-mix(in srgb, var(--brand-blue) 10%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--brand-blue) 14%, var(--border));
+  color: var(--brand-blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0 18px;
+  font-weight: 700;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btnPrimary {
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand-orange-1), var(--brand-orange-2));
+  box-shadow: 0 14px 32px rgba(215, 106, 0, 0.24);
+}
+.btnSecondary {
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
+  border-color: var(--border);
+  color: var(--fg);
+}
+.kpi {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.mutedList {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.logoWall {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.logoStub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  font-weight: 700;
+}
+.formField {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--fg);
+}
+textarea.formField { min-height: 140px; resize: vertical; }
+.inlineMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.productHero {
+  background: var(--hero-glow);
+}
+.highlightBox {
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 94%, transparent), color-mix(in srgb, var(--brand-blue) 6%, var(--surface)));
+  box-shadow: var(--shadow-lg);
+}
+.siteShell {
+  overflow-x: clip;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-::selection {
-  background: #dbeafe;
-  color: #0f172a;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width: 980px) {
+  .grid2, .grid3, .grid4, .logoWall {
+    grid-template-columns: 1fr;
   }
+  .section { padding: 72px 0; }
 }

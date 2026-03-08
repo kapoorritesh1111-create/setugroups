@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "track": "SETU Track",
+    "crm": "SETU CRM",
+    "solutions": "Solutions",
+    "company": "Company",
+    "caseStudies": "Case Studies",
+    "newsroom": "Newsroom",
+    "contact": "Contact"
+  },
+  "actions": {
+    "theme": "Theme",
+    "bookDemo": "Book a Demo"
+  }
+}

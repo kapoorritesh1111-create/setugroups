@@ -1,0 +1,36 @@
+.sectionHead {
+  display: grid;
+  gap: 12px;
+  max-width: 800px;
+  margin-bottom: 28px;
+}
+.list {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.itemTitle {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.miniLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brand-orange-2);
+  font-weight: 700;
+}
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.metricPill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
