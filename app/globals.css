@@ -11,37 +11,20 @@ html {
 }
 
 body {
-  @apply bg-soft text-navy antialiased;
-  background-image:
-    radial-gradient(circle at top right, rgba(108, 99, 255, 0.08), transparent 30%),
-    radial-gradient(circle at top left, rgba(58, 123, 255, 0.10), transparent 25%),
-    linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
+  @apply bg-soft text-ink antialiased;
 }
 
 ::selection {
-  background: rgba(58, 123, 255, 0.16);
+  background: rgba(58, 123, 255, 0.18);
 }
 
-.section-ring {
-  position: relative;
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(58,123,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58,123,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
-.section-ring::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1.5rem;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(58,123,255,0.22), rgba(108,99,255,0.10));
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(18px);
+.card-border {
+  @apply border border-slate-200/80;
 }

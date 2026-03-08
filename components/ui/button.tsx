@@ -1,14 +1,23 @@
-import Link from "next/link";
-import { ReactNode } from "react";
+import Link from 'next/link';
 
 const styles = {
   primary:
-    "inline-flex items-center justify-center rounded-full bg-brand-gradient px-5 py-3 text-sm font-semibold text-white shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-card",
+    'inline-flex items-center justify-center rounded-full bg-setu-gradient px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5',
   secondary:
-    "inline-flex items-center justify-center rounded-full border border-navy/10 bg-white px-5 py-3 text-sm font-semibold text-navy transition-colors duration-200 hover:border-electric/30 hover:text-electric",
+    'inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-electric',
+  ghost:
+    'inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium text-ink transition hover:text-electric',
 };
 
-export function Button({ href, children, variant = "primary" }: { href: string; children: ReactNode; variant?: keyof typeof styles }) {
+export function Button({
+  href,
+  children,
+  variant = 'primary',
+}: {
+  href: string;
+  children: React.ReactNode;
+  variant?: keyof typeof styles;
+}) {
   return (
     <Link href={href} className={styles[variant]}>
       {children}

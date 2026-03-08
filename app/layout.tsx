@@ -1,29 +1,26 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
-const title = "Setu Groups | Intertwining Trade & Technology";
-const description = "A modern bridge between global commerce and product-grade software. Setu Groups combines India-led import-export execution with premium web app development and a growing SaaS ecosystem.";
+const siteUrl = 'https://setugroups.com';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.setugroups.com"),
-  title,
-  description,
+  metadataBase: new URL(siteUrl),
+  title: 'Setu Groups | Intertwining Trade & Technology',
+  description:
+    'A modern bridge between global commerce and product-grade software. Setu Groups combines import-export execution, web app development, and a growing SaaS ecosystem.',
   openGraph: {
-    title,
-    description,
-    url: "https://www.setugroups.com",
-    siteName: "Setu Groups",
-    locale: "en_US",
-    type: "website",
+    title: 'Setu Groups',
+    description:
+      'Import-export operations, web app development, Setu Track, and Setu CRM under one master brand.',
+    url: siteUrl,
+    siteName: 'Setu Groups',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-  },
-  robots: {
-    index: true,
-    follow: true,
+    card: 'summary_large_image',
+    title: 'Setu Groups',
+    description:
+      'Intertwining Trade & Technology across import-export, web app development, and SaaS products.',
   },
 };
 
@@ -31,23 +28,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Setu Groups',
-  url: 'https://www.setugroups.com',
-  description,
+  url: siteUrl,
   slogan: 'Intertwining Trade & Technology',
-  knowsAbout: ['Import-export operations', 'Web app development', 'SaaS products'],
-  makesOffer: [
-    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Import-export operations' } },
-    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web app development' } },
-    { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'Setu Track' } },
-  ],
+  description:
+    'Setu Groups operates across import-export operations, web app development, and SaaS products including Setu Track and Setu CRM.',
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>
   );

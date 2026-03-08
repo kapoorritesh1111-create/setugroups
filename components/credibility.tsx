@@ -1,53 +1,28 @@
-"use client";
-
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { SectionShell } from "@/components/ui/section-shell";
-
-const metrics = [
-  ['3', 'Business pillars'],
-  ['2', 'SaaS products in ecosystem'],
-  ['24h', 'Response commitment'],
-];
-
-const logos = ['/client-logo-1.svg', '/client-logo-2.svg', '/client-logo-3.svg'];
+import Image from 'next/image';
+import { SectionShell } from './ui/section-shell';
 
 export function Credibility() {
   return (
-    <SectionShell id="credibility" eyebrow="Credibility" title="Metrics + client logos (use placeholders).">
-      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-[28px] bg-white p-8 shadow-soft">
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-            {metrics.map(([value, label], index) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.35 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="rounded-2xl bg-soft p-6"
-              >
-                <p className="text-3xl font-semibold text-navy">{value}</p>
-                <p className="mt-2 text-sm text-navy/65">{label}</p>
-              </motion.div>
-            ))}
-          </div>
+    <SectionShell id="credibility" eyebrow="Credibility" title="Signals of structured delivery." className="bg-soft">
+      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-6 sm:grid-cols-3">
+          {[
+            ['10+', 'Years combined trade experience'],
+            ['2', 'SaaS products in the Setu roadmap'],
+            ['24h', 'Target response time for new conversations'],
+          ].map(([metric, label]) => (
+            <div key={metric} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+              <p className="text-4xl font-semibold text-electric">{metric}</p>
+              <p className="mt-3 text-slate-600">{label}</p>
+            </div>
+          ))}
         </div>
-        <div className="rounded-[28px] bg-white p-8 shadow-soft">
-          <div className="grid gap-4 sm:grid-cols-3">
-            {logos.map((logo, index) => (
-              <motion.div
-                key={logo}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.35 }}
-                transition={{ duration: 0.4, delay: index * 0.06 }}
-                whileHover={{ y: -4 }}
-                className="flex min-h-32 items-center justify-center rounded-2xl border border-navy/6 bg-soft p-6"
-              >
-                <Image src={logo} alt={`Client logo ${index + 1}`} width={160} height={60} className="h-12 w-auto opacity-80" />
-              </motion.div>
-            ))}
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Client logos</p>
+          <div className="mt-8 grid grid-cols-3 gap-6 opacity-80">
+            <Image src="/client-logo-1.svg" alt="Client logo 1" width={120} height={44} />
+            <Image src="/client-logo-2.svg" alt="Client logo 2" width={120} height={44} />
+            <Image src="/client-logo-3.svg" alt="Client logo 3" width={120} height={44} />
           </div>
         </div>
       </div>

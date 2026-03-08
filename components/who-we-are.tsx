@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { SectionShell } from "@/components/ui/section-shell";
+import { motion } from 'framer-motion';
+import { SectionShell } from './ui/section-shell';
 
 export function WhoWeAre() {
   return (
@@ -10,26 +10,25 @@ export function WhoWeAre() {
       eyebrow="Who We Are"
       title="One master brand connecting trade execution, software delivery, and SaaS products."
       description="Setu Groups is built on a simple idea: when operations and technology work together, businesses run better."
+      className="bg-soft"
     >
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.35 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="section-ring mx-auto max-w-5xl rounded-[28px] bg-white p-8 shadow-card sm:p-10"
+        className="grid gap-6 md:grid-cols-3"
       >
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            ["Trade", "Operational execution with commercial discipline and on-ground coordination from India."],
-            ["Technology", "Product-grade web application delivery with premium UI systems and scalable architecture."],
-            ["Ecosystem", "A growing software portfolio designed to feel unified, structured, and trustworthy."],
-          ].map(([title, text]) => (
-            <div key={title} className="rounded-2xl bg-soft p-6">
-              <p className="text-lg font-semibold text-navy">{title}</p>
-              <p className="mt-3 text-sm leading-7 text-navy/70">{text}</p>
-            </div>
-          ))}
-        </div>
+        {[
+          ['Trade Execution', 'Commercial follow-through, documentation rigor, and India-based operational depth.'],
+          ['Software Delivery', 'Premium UI systems, scalable architecture, and product-grade development discipline.'],
+          ['SaaS Ecosystem', 'Focused tools like Setu Track and Setu CRM designed to bring structure to real operations.'],
+        ].map(([title, text]) => (
+          <div key={title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 className="text-xl font-semibold">{title}</h3>
+            <p className="mt-3 text-slate-600">{text}</p>
+          </div>
+        ))}
       </motion.div>
     </SectionShell>
   );
