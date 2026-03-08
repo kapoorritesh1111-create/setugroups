@@ -8,9 +8,9 @@ import { CRMIcon } from '@/components/icons/CRMIcon';
 import Image from 'next/image';
 
 const metrics = [
-  { label: 'Operational focus', value: 'Import–Export + SaaS' },
-  { label: 'Current live product', value: 'Setu Track' },
-  { label: 'Next product in pipeline', value: 'Setu CRM' }
+  { label: 'Brand principle', value: 'Intertwining Trade & Technology' },
+  { label: 'Live SaaS product', value: 'Setu Track' },
+  { label: 'Commercial foundation', value: 'India-led import–export execution' }
 ];
 
 export default function HomePage() {
@@ -22,8 +22,8 @@ export default function HomePage() {
       <SectionShell
         id="about"
         eyebrow="Who we are"
-        title="A modern company operating at the intersection of trade and technology."
-        description="Setu Groups combines real-world import–export execution from India with product-minded software delivery. The result is a business that understands operations deeply and builds digital systems that help companies run better."
+        title="One master brand connecting trade execution, software delivery, and SaaS products."
+        description="The Setu Groups identity is not decorative. It represents connection, continuity, and systems that work together. That idea now drives the site itself: warm, trustworthy, and operationally serious, with a visual language rooted in the navy-and-orange master logo."
       >
         <div className="metrics-grid">
           {metrics.map((metric) => (
@@ -38,8 +38,8 @@ export default function HomePage() {
       <SectionShell
         id="products"
         eyebrow="Products"
-        title="A focused SaaS portfolio built from operational realities."
-        description="Our products are shaped by the kinds of workflows teams actually struggle with: contractors, payroll flows, approvals, exports, and customer operations."
+        title="A focused product ecosystem shaped by real-world workflows."
+        description="Setu products are designed from operational reality rather than abstract feature lists. The result is software with stronger structure, clearer workflows, and a more credible business foundation."
       >
         <div className="cards-grid cards-grid--products">
           <ProductCard
@@ -54,11 +54,11 @@ export default function HomePage() {
             }
             title="Setu Track"
             status="Live"
-            description="A contractor operations platform for time tracking, approvals, payroll runs, exports, and profitability visibility."
+            description="A contractor operations platform that brings together time tracking, approvals, payroll runs, exports, and margin visibility in one structured system."
             bullets={[
               'Contractor workforce operations',
-              'Time tracking and approvals',
-              'Payroll and export workflows'
+              'Approval, payroll, and export control',
+              'Built as the first SaaS product in the Setu ecosystem'
             ]}
             primaryCta={{ label: 'Explore Setu Track', href: '#contact' }}
             secondaryCta={{ label: 'View company services', href: '#services' }}
@@ -68,11 +68,11 @@ export default function HomePage() {
             logo={<CRMIcon className="crm-icon" />}
             title="Setu CRM"
             status="Coming soon"
-            description="A future CRM product designed to unify customer workflows, sales operations, pipeline visibility, and account follow-through in one clean system."
+            description="A future CRM platform for customer workflows, pipeline visibility, account continuity, and cleaner commercial operations across growing teams."
             bullets={[
-              'Customer and pipeline visibility',
-              'Operations-aware workflow design',
-              'Built to complement the Setu ecosystem'
+              'A CRM shaped by operational thinking',
+              'Clean customer and pipeline visibility',
+              'Designed to sit naturally within the Setu product family'
             ]}
             primaryCta={{ label: 'Join the waitlist', href: '#contact' }}
             secondaryCta={{ label: 'See what we build', href: '#services' }}
@@ -83,26 +83,26 @@ export default function HomePage() {
       <SectionShell
         id="services"
         eyebrow="Services"
-        title="Operational services and software capability under one brand."
-        description="Setu Groups serves clients both through practical trade execution and through modern software delivery."
+        title="Commercial execution and software capability under one master company."
+        description="Setu Groups serves clients through both operational services and product-minded digital delivery, giving the brand real business depth beyond a typical software studio."
       >
         <div className="cards-grid">
           <ServiceCard
             title="Import–Export Operations"
-            description="We support import–export operations from India with a practical understanding of supply flow, coordination, and commercial execution."
+            description="We support import–export operations from India with a practical understanding of supply coordination, execution flow, and trusted commercial follow-through."
             points={[
-              'India-based trade operations support',
-              'Execution-oriented business coordination',
-              'A trusted, professional operating partner'
+              'India-based trade execution support',
+              'Commercial coordination with operational clarity',
+              'A professional partner for cross-border business workflows'
             ]}
           />
           <ServiceCard
             title="Web App Development"
-            description="We design and build clean, modern web applications with a SaaS mindset: strong structure, thoughtful UX, and production-ready implementation."
+            description="We design and build modern web applications with stronger structure, cleaner interfaces, and a product-grade delivery mindset."
             points={[
-              'Custom product and portal builds',
-              'Modern Next.js-based architecture',
-              'UI systems with premium SaaS polish'
+              'Next.js-based product and portal builds',
+              'Modern UI systems with premium polish',
+              'Production-ready implementation for internal or external products'
             ]}
           />
         </div>
@@ -111,26 +111,26 @@ export default function HomePage() {
       <SectionShell
         id="why-setu"
         eyebrow="Why Setu"
-        title="Built with both business context and software discipline."
-        description="What makes Setu different is that we do not approach software as a disconnected design exercise. We understand workflows, operational pressure, and the need for systems that are reliable, clear, and commercially useful."
+        title="The brand works because the business model is genuinely connected."
+        description="The Setu logo suggests intertwined systems. The company model reinforces that idea: trade experience informs product thinking, software discipline improves operations, and each layer strengthens the broader platform."
       >
         <div className="feature-band glass-card">
           <div>
-            <h3>Trade-informed product thinking</h3>
+            <h3>Business-first credibility</h3>
             <p>
-              We bring real operational perspective into product design, which helps us build software that fits the way teams actually work.
+              Setu is not framed like a generic studio. The company has a real commercial base, which gives the brand more substance and trust.
             </p>
           </div>
           <div>
-            <h3>Premium SaaS design standards</h3>
+            <h3>Unified visual identity</h3>
             <p>
-              Clean UI, strong hierarchy, subtle motion, and trust-oriented presentation are built into the system from the start.
+              The navy-and-orange master brand now drives the site tone, interaction accents, and overall presentation instead of relying on a generic SaaS palette.
             </p>
           </div>
           <div>
-            <h3>Long-term ecosystem vision</h3>
+            <h3>Room for ecosystem expansion</h3>
             <p>
-              Setu Track is live, Setu CRM is next, and the broader Setu platform is designed to grow product by product.
+              Setu Track is the first clear product proof point, and the brand structure is already strong enough to support future products cleanly.
             </p>
           </div>
         </div>
@@ -138,16 +138,16 @@ export default function HomePage() {
 
       <SectionShell
         id="contact"
-        eyebrow="Get in touch"
-        title="Ready to explore a project, product partnership, or company introduction?"
-        description="Use this section as your CTA block for Vercel deployment. You can later replace the contact links with a real form, Calendly, or CRM capture."
+        eyebrow="Start the conversation"
+        title="Use the master brand to open doors across services, partnerships, and products."
+        description="This call-to-action section is intentionally simple so your next team can connect it to real email, forms, product URLs, or lead capture workflows without changing the design language."
       >
         <div className="cta-panel glass-card">
           <div>
             <p className="cta-kicker">Setu Groups</p>
-            <h3>Let’s build something strong, modern, and durable.</h3>
+            <h3>Built to feel trustworthy before the first meeting.</h3>
             <p>
-              For now, update these contact actions with your real website, email, product URLs, or scheduling links before launch.
+              Replace the placeholder actions below with your real company email, live product URL, and scheduling or contact workflow before launch.
             </p>
           </div>
           <div className="cta-actions">

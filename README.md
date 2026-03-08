@@ -1,16 +1,27 @@
-# Setu Groups Landing Site
+# Setu Groups Landing Site — Brand Aligned Edition
 
-A clean, modern Next.js landing website for **Setu Groups**, designed for fast deployment on Vercel.
+A clean, modern Next.js landing website for **Setu Groups**, revised so the visual system aligns more closely with the **Setu Groups master logo**.
+
+## What changed in this brand-aligned pass
+
+- Shifted the site away from a generic dark SaaS palette
+- Rebuilt the visual tone around the **Setu Groups logo colors**:
+  - navy / deep blue for trust and structure
+  - orange / gold for warmth, motion, and brand emphasis
+- Updated hero messaging to reflect the master brand idea:
+  **Intertwining Trade & Technology**
+- Restyled cards, buttons, badges, and accents to match the logo more naturally
+- Updated the temporary **Setu CRM** icon so it sits inside the same brand family
 
 ## What is included
 
 - Premium one-page landing experience with responsive layout
 - Setu Groups hero and company positioning
 - Setu Track product section using provided brand assets
-- Setu CRM placeholder section with a temporary brand icon
+- Setu CRM placeholder section with a temporary brand-aligned icon
 - Import–export services section
 - Web app development services section
-- Clean navigation, footer, gradients, and subtle glassmorphism styling
+- Clean navigation, footer, gradients, and polished interaction styling
 - Public asset structure ready for deployment
 
 ## Tech stack
@@ -44,19 +55,12 @@ public/
 
 ## Local setup
 
-1. Install dependencies
-
 ```bash
 npm install
-```
-
-2. Start development server
-
-```bash
 npm run dev
 ```
 
-3. Open the site
+Open:
 
 ```text
 http://localhost:3000
@@ -80,24 +84,11 @@ npm run start
 
 Before launch, update these placeholders:
 
-- `mailto:hello@setugroups.com` with the correct contact email
-- CTA links for Setu Track with the real product URL
-- Optional SEO metadata in `app/layout.tsx`
-- Optional social sharing image in `public/`
+- `mailto:hello@setugroups.com` with the correct company email
+- the Setu Track CTA with the real product URL
+- metadata in `app/layout.tsx` with your final domain
+- optional OG/social image in `public/`
 
-## Notes on assets
+## Notes on design direction
 
-This repository includes the provided brand packs in `public/brand`.
-The site uses:
-
-- Setu Groups logo assets for the company brand
-- Setu Track logo assets for the live SaaS product
-- A temporary custom icon component for Setu CRM
-
-## Suggested next enhancements
-
-- Add a real contact form or CRM capture flow
-- Add product detail pages for Setu Track and Setu CRM
-- Add testimonials, trust badges, and case studies
-- Add analytics and conversion tracking
-- Add an OG image and more complete SEO metadata
+This pass is intentionally more **brand-led** than the original. It aims to make the site feel more like a real master company homepage and less like a generic startup landing page.
