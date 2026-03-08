@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SectionShell } from "@/components/ui/section-shell";
+import { SectionShell } from "../ui/section-shell";
 
 const metrics = [
   ["Time to visibility", "Same-day visibility into submitted hours and approval status."],

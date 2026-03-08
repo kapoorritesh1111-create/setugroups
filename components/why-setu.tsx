@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SectionShell } from "@/components/ui/section-shell";
+import { SectionShell } from "./ui/section-shell";
 
 const points = [
   '10+ years combined trade experience',

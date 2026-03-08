@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { SectionShell } from "@/components/ui/section-shell";
-import { Button } from "@/components/ui/button";
+import { SectionShell } from "./ui/section-shell";
+import { Button } from "./ui/button";
 
 const products = [
   {

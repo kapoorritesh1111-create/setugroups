@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { SectionShell } from "@/components/ui/section-shell";
+import { Button } from "./ui/button";
+import { SectionShell } from "./ui/section-shell";
 
 export function Contact() {
   return (

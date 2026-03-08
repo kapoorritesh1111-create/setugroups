@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Container } from "@/components/ui/container";
+import { Button } from "../ui/button";
+import { Container } from "../ui/container";
 
 export function FinalCTA() {
   return (

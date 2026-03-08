@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Container } from "@/components/ui/container";
+import { Button } from "../ui/button";
+import { Container } from "../ui/container";
 
 export function ProductHero() {
   return (

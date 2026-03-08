@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { ProductHero } from "@/components/setu-track/product-hero";
-import { FeatureGrid } from "@/components/setu-track/feature-grid";
-import { WorkflowSection } from "@/components/setu-track/workflow";
-import { ScreenshotSection } from "@/components/setu-track/screenshots";
-import { SocialProofSection } from "@/components/setu-track/social-proof";
-import { FinalCTA } from "@/components/setu-track/final-cta";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
+import { ProductHero } from "../../components/setu-track/product-hero";
+import { FeatureGrid } from "../../components/setu-track/feature-grid";
+import { WorkflowSection } from "../../components/setu-track/workflow";
+import { ScreenshotSection } from "../../components/setu-track/screenshots";
+import { SocialProofSection } from "../../components/setu-track/social-proof";
+import { FinalCTA } from "../../components/setu-track/final-cta";
 
 export const metadata: Metadata = {
   title: "Setu Track | Contractor Operations Platform",

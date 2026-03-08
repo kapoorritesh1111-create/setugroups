@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
-import { WaitlistForm } from "@/components/forms/waitlist-form";
+import { Container } from "../ui/container";
+import { Button } from "../ui/button";
+import { WaitlistForm } from "../forms/waitlist-form";
 
 export function WaitlistPageContent() {
   return (
