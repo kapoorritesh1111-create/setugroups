@@ -1,33 +1,54 @@
-import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
+
+const title = "Setu Groups | Intertwining Trade & Technology";
+const description = "A modern bridge between global commerce and product-grade software. Setu Groups combines India-led import-export execution with premium web app development and a growing SaaS ecosystem.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://example.com'),
-  title: 'Setu Groups — Trade, Technology, and SaaS Products',
-  description:
-    'Setu Groups builds across import-export operations, web app development, and modern SaaS products including Setu Track and Setu CRM.',
+  metadataBase: new URL("https://www.setugroups.com"),
+  title,
+  description,
   openGraph: {
-    title: 'Setu Groups',
-    description:
-      'Intertwining trade and technology across import-export, custom web apps, and SaaS products.',
-    type: 'website'
+    title,
+    description,
+    url: "https://www.setugroups.com",
+    siteName: "Setu Groups",
+    locale: "en_US",
+    type: "website",
   },
-  icons: {
-    icon: [
-      { url: '/brand/setu-groups/favicons/favicon-32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/brand/setu-groups/favicons/favicon-16.png', sizes: '16x16', type: 'image/png' }
-    ],
-    apple: [
-      { url: '/brand/setu-groups/favicons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
-    ]
-  }
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Setu Groups',
+  url: 'https://www.setugroups.com',
+  description,
+  slogan: 'Intertwining Trade & Technology',
+  knowsAbout: ['Import-export operations', 'Web app development', 'SaaS products'],
+  makesOffer: [
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Import-export operations' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web app development' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'SoftwareApplication', name: 'Setu Track' } },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </body>
     </html>
   );
 }
